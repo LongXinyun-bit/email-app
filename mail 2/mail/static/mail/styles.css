@@ -1,0 +1,74 @@
+textarea {
+    min-height: 400px;
+}
+
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 邮件列表样式 */
+.email-item {
+    transition: all 0.2s ease;
+}
+
+.email-item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* 邮件详情样式 */
+.email-detail {
+    background-color: #f9f9f9;
+}
+
+/* 初始隐藏视图 */
+#compose-view, #email-view {
+    display: none;
+}
+
+/* 按钮样式 */
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+/* 滑动删除功能样式 */
+.email-item-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.email-item {
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #dc3545;
+  color: white;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.email-item.swiped {
+  transform: translateX(-80px);
+}
